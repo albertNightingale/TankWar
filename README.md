@@ -18,6 +18,8 @@ Food on the ground will despawn after a certain time.
 
 ## Performance
 The code is inoptimized. 
+1. Networking: JSON communication between server and client offers little optimization on the networking part. 
+2. Physics: The server queries all entities on the map every frame to decide when one entity is going to collide with other entities. There is no use of additional data structures or algorithms that can optimize the code. A spacial hash algorithm and/or quad-tree algorithm can help with optimization. 
 
 ## Reference: 
 Utilizes the Networking Library built in the past: 
